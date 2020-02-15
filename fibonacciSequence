@@ -1,0 +1,21 @@
+function fibonacciGenerator (n) {
+    // Create a function that prints the fibonacci sequence
+    var output = [0, 1];
+    var num1 = output[0]
+    var num2 = output[1]
+    var next;
+    
+    if (n === 1){
+        output.pop();
+    }
+    for(var i = 0; i<(n-2); i++){
+        next = num1 + num2
+        num1 = num2
+        num2 = next
+        output.push(next)
+    }
+    //Return an array of fibonacci numbers.
+    return output
+}
+
+fibonacciGenerator(2);
