@@ -3,7 +3,10 @@ function HouseKeeper(name, age, yearsOfExperience, languages){
     this.age = age
     this.yearsOfExperience = yearsOfExperience
     this.languages = languages
+    this.clean = function() {
+        alert(this.name + ": Cleaning in progress...");
+    }
 }
 
 var houseKeeper1 = new HouseKeeper("Maria", 26, 4, ["English", "Portuguese"])
-console.log(houseKeeper1.languages);
+houseKeeper1.clean();
