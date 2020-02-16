@@ -1,0 +1,37 @@
+var calculate = function () {
+
+	var exam1 = document.getElementById("exam1").value;
+	exam1 = parseFloat(exam1);
+
+	var exam2 = document.getElementById("exam2").value;
+	exam2 = parseFloat(exam2);
+
+	var project = document.getElementById("project").value;
+	project = parseFloat(project);
+	project = project * 50 /100;
+	
+	var total = (exam1 + exam2 + project);
+	var output = document.getElementById("output");
+
+	if (total >= 80){
+		output.innerHTML = "Your grade is: A";
+		output.style.color= "blue";
+	} 
+	else if (total > 80 || total >= 60){
+		output.innerHTML = "Your grade is: B";
+		output.style.color= "blue";
+	}
+	else {
+		output.innerHTML = "Your grade is: F";
+		output.style.color= "red";
+	}
+	console.log(total)
+	return false;
+	
+}
+
+
+window.onload = function () {
+	var btn = document.getElementById("btn");
+	btn.onclick = calculate;
+}
